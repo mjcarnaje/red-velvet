@@ -191,7 +191,7 @@ a {
 
 .header {
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(to right bottom, rgba(99, 84, 82, 0.4), rgba(104, 88, 86, 0.4)), url(/img/cover/red-velvet-blur.jpg);
+  background-image: linear-gradient(to right bottom, rgba(99, 84, 82, 0.4), rgba(104, 88, 86, 0.4)), url(../img/cover/red-velvet-blur.jpg);
   background-position: top;
   background-size: cover;
   display: grid;
