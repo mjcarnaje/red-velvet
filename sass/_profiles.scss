@@ -1,0 +1,83 @@
+.profiles-container {
+    margin: 10rem 0 5rem;
+    grid-column: center-start / center-end;
+    display: grid;
+    justify-items: center;
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.profiles {
+    display: grid;
+
+    grid-template-columns: 1fr repeat(6, 1fr) 1fr;
+    grid-gap: 4rem;
+    align-items: center;
+    text-align: center;
+
+    &__wallpaper {
+        // THE HEADER WALLPAPER
+        grid-column: 2 / 8; // LOCATION
+
+        &--picture {
+            // PICTURE
+            width: 100%;
+            border-radius: 8px;
+        }
+        &--caption {
+            //TEXT
+            font-size: 1.8rem;
+            margin-top: 3px;
+        }
+    }
+
+    &__icons {
+        //OFFICIAL SOCIAL ICON CONTAINER
+        grid-column: 3 / 7;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 10rem;
+        position: relative;
+        @media only screen and (max-width: $bp-850) {
+            grid-column: 2 / 8;
+        }
+
+        &::after {
+            // RED VELVET OFFICIAL ACCOUNT TEXT
+            display: block;
+            height: 2px;
+            background-color: $color-primary;
+            content: 'RED VELVET OFFICIAL ACCOUNTS';
+            width: 80%;
+            position: absolute;
+            bottom: -2rem;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            line-height: 2.2;
+        }
+    }
+
+    &__icon {
+        // OFFICIAL SOCIAL ICON
+        height: 4rem;
+        width: 4rem;
+        margin-bottom: 4px;
+        transition: all 0.2s;
+        background-color: transparent;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__links {
+        display: block;
+
+        @media only screen and (max-width: $bp-850) {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

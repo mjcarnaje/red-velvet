@@ -1,0 +1,97 @@
+.galleries {
+    grid-column: full-start / full-end;
+    display: grid;
+
+    &__title {
+        justify-self: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3rem;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(8, 6vw);
+
+    grid-gap: 1rem;
+    padding: 1rem;
+
+    &__item {
+        &--1 {
+            grid-area: 1 / 1 / span 3 / span 3;
+        }
+        &--2 {
+            grid-area: 1 / 4 / span 2 / span 2;
+        }
+        &--3 {
+            grid-area: 1 / 6 / span 2 / span 3;
+        }
+        &--4 {
+            grid-area: 1 / 11 / span 2 / span 3;
+        }
+        &--5 {
+            grid-area: 4 / 1 / span 2 / span 3;
+        }
+        &--6 {
+            grid-area: 6 / 14 / span 2 / span 2;
+        }
+        &--7 {
+            grid-area: 5 / 7 / span 2 / span 2;
+        }
+        &--8 {
+            grid-area: 7 / 11 / span 2 / span 3;
+        }
+        &--9 {
+            grid-area: 3 / 13 / span 3 / span 3;
+        }
+        &--10 {
+            grid-area: 8 / 14 / span 1 / span 2;
+        }
+        &--11 {
+            grid-area: 3 / 4 / span 2 / span 5;
+        }
+        &--12 {
+            grid-area: 7 / 4 / span 2 / span 4;
+        }
+        &--13 {
+            grid-area: 4 / 9 / span 3 / span 2;
+        }
+        &--14 {
+            grid-area: 6 / 1 / span 3 / span 3;
+        }
+        &--15 {
+            grid-area: 7 / 8 / span 2 / span 3;
+        }
+        &--16 {
+            grid-area: 1 / 9 / span 3 / span 2;
+        }
+        &--17 {
+            grid-area: 5 / 4 / span 2 / span 3;
+        }
+        &--18 {
+            grid-column: span 3;
+        }
+        &--19 {
+            grid-area: 1 / 14 / span 2 / span 2;
+        }
+        &--20 {
+            grid-area: 3 / 11 / span 3 / span 2;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
