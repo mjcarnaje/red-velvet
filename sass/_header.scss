@@ -1,83 +1,83 @@
 .header {
-    grid-column: full-start / col-end 6;
+  grid-column: full-start / col-end 6;
 
-    background-image: linear-gradient(
-            to right bottom,
-            rgba(99, 84, 82, 0.4),
-            rgba(104, 88, 86, 0.4)
-        ),
-        url(../img/cover/red-velvet-blur.jpg);
-    background-position: top;
-    background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(99, 84, 82, 0.4),
+      rgba(104, 88, 86, 0.4)
+    ),
+    url(../img/cover/red-velvet-blur.jpg);
+  background-position: top;
+  background-size: cover;
 
-    display: grid;
-    grid-template-rows: 5fr min-content 1fr min-content min-content;
-    //so that the image will stay the same and responsive;
-    grid-template-columns: minmax(min-content, max-content);
-    grid-row-gap: 1.5rem;
+  display: grid;
+  grid-template-rows: 5fr min-content 1fr min-content min-content;
+  //so that the image will stay the same and responsive;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 1.5rem;
 
-    padding: 4rem 8rem 8rem 8rem;
-    justify-content: center;
+  padding: 4rem 8rem 8rem 8rem;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-850) {
+    grid-column: 1 / -1;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 4rem;
+  }
+
+  &__text {
+    align-self: center;
+  }
+  &__btn {
+    align-self: start;
+    justify-self: start;
+  }
+
+  &__logo {
+    height: 11rem;
+    justify-self: center;
 
     @media only screen and (max-width: $bp-850) {
-        grid-column: 1 / -1;
+      height: 10rem;
+      align-self: center;
     }
-    @media only screen and (max-width: $bp-smallest) {
-        padding: 4rem;
-    }
+  }
+  &__seenon-text {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 1rem;
 
-    &__text {
-        align-self: center;
-    }
-    &__btn {
-        align-self: start;
-        justify-self: start;
-    }
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr; //!IMPORTANT SO THAT IT WILL APPEAR SIDE BY SIDE;
+    grid-column-gap: 1.5rem;
+    align-items: center;
 
-    &__logo {
-        height: 11rem;
-        justify-self: center;
-
-        @media only screen and (max-width: $bp-850) {
-            height: 10rem;
-            align-self: center;
-        }
-    }
-    &__seenon-text {
-        font-size: 2rem;
-        color: #fff;
-        margin-top: 1rem;
-
-        display: grid;
-        grid-template-columns: 1fr max-content 1fr; //!IMPORTANT SO THAT IT WILL APPEAR SIDE BY SIDE;
-        grid-column-gap: 1.5rem;
-        align-items: center;
-
-        &::before, //*LINES
+    &::before, //*LINES
         &::after {
-            content: '';
-            height: 1px;
-            display: block;
-            background-color: currentColor;
-        }
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor;
     }
+  }
 
-    &__seenon-logos {
-        /*         
+  &__seenon-logos {
+    /*         
         display: flex; // !FLEX WAY
         justify-content: space-evenly; 
         */
 
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 3rem;
 
-        justify-items: center;
-        align-items: center;
+    justify-items: center;
+    align-items: center;
 
-        img {
-            max-height: 4rem; // !we need to define that height and the width in order to have a reponsive img;
-            max-width: 100%;
-        }
+    img {
+      max-height: 4rem; // !we need to define that height and the width in order to have a reponsive img;
+      max-width: 100%;
     }
+  }
 }

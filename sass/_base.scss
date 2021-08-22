@@ -13,78 +13,78 @@ $color-blue-light-2: #bed7f8;
 $color-grey-dark: #eee;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
 
 //background color
 $bg-1: linear-gradient(
-    to right bottom,
-    rgba(32, 162, 133, 0.85),
-    rgba(24, 52, 45, 0.85)
+  to right bottom,
+  rgba(32, 162, 133, 0.85),
+  rgba(24, 52, 45, 0.85)
 );
 $bg-2: linear-gradient(
-    to right bottom,
-    rgba(255, 183, 255, 0.85),
-    rgba(130, 106, 237, 0.85)
+  to right bottom,
+  rgba(255, 183, 255, 0.85),
+  rgba(130, 106, 237, 0.85)
 );
 $bg-3: linear-gradient(
-    to right bottom,
-    rgba(230, 179, 51, 0.85),
-    rgba(182, 53, 54, 0.85)
+  to right bottom,
+  rgba(230, 179, 51, 0.85),
+  rgba(182, 53, 54, 0.85)
 );
 $bg-4: linear-gradient(
-    to right bottom,
-    rgba(226, 187, 74, 0.85),
-    rgba(208, 97, 33, 0.85)
+  to right bottom,
+  rgba(226, 187, 74, 0.85),
+  rgba(208, 97, 33, 0.85)
 );
 $bg-5: linear-gradient(
-    to right bottom,
-    rgba(137, 21, 22, 0.85),
-    rgba(0, 1, 0, 0.85)
+  to right bottom,
+  rgba(137, 21, 22, 0.85),
+  rgba(0, 1, 0, 0.85)
 );
 $bg-6: linear-gradient(
-    to right bottom,
-    rgba(101, 102, 19, 0.85),
-    rgba(21, 24, 22, 0.85)
+  to right bottom,
+  rgba(101, 102, 19, 0.85),
+  rgba(21, 24, 22, 0.85)
 );
 
 $bg-1-0: linear-gradient(
-    to right bottom,
-    rgba(32, 162, 133, 0.2),
-    rgba(24, 52, 45, 0.2)
+  to right bottom,
+  rgba(32, 162, 133, 0.2),
+  rgba(24, 52, 45, 0.2)
 );
 $bg-2-0: linear-gradient(
-    to right bottom,
-    rgba(255, 183, 255, 0.2),
-    rgba(130, 106, 237, 0.2)
+  to right bottom,
+  rgba(255, 183, 255, 0.2),
+  rgba(130, 106, 237, 0.2)
 );
 $bg-3-0: linear-gradient(
-    to right bottom,
-    rgba(230, 179, 51, 0.2),
-    rgba(182, 53, 54, 0.2)
+  to right bottom,
+  rgba(230, 179, 51, 0.2),
+  rgba(182, 53, 54, 0.2)
 );
 $bg-4-0: linear-gradient(
-    to right bottom,
-    rgba(226, 187, 74, 0.2),
-    rgba(208, 97, 33, 0.2)
+  to right bottom,
+  rgba(226, 187, 74, 0.2),
+  rgba(208, 97, 33, 0.2)
 );
 $bg-5-0: linear-gradient(
-    to right bottom,
-    rgba(137, 21, 22, 0.2),
-    rgba(0, 1, 0, 0.2)
+  to right bottom,
+  rgba(137, 21, 22, 0.2),
+  rgba(0, 1, 0, 0.2)
 );
 $bg-6-0: linear-gradient(
-    to right bottom,
-    rgba(101, 102, 19, 0.2),
-    rgba(21, 24, 22, 0.2)
+  to right bottom,
+  rgba(101, 102, 19, 0.2),
+  rgba(21, 24, 22, 0.2)
 );
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 //*RESPONSIVE BREAKPOINTS
@@ -97,57 +97,51 @@ $bp-850: 53.125em; // 600px
 $bp-smallest: 43.125em; //500px
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+  box-sizing: border-box;
+  font-size: 62.5%;
 
-    @media only screen and (max-width: $bp-box) {
-        font-size: 62%;
-    }
-    @media only screen and (max-width: $bp-largest) {
-        font-size: 55%;
-    }
-    /*     @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp-box) {
+    font-size: 62%;
+  }
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 55%;
+  }
+  /*     @media only screen and (max-width: $bp-medium) {
         font-size: 50%;
     } */
 }
 
 body {
-    font-family: $font-primary;
-    color: black;
-    font-weight: 300;
-    line-height: 1.6;
+  font-family: $font-primary;
+  color: black;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: 80vh min-content min-content 40vw repeat(3, min-content);
-    grid-template-columns:
-        [sidebar-start] 5rem [sidebar-end full-start] minmax(6rem, 1fr)
-        [center-start] repeat(
-            8,
-            [col-start] minmax(min-content, 14rem) [col-end]
-        )
-        [center-end] minmax(6rem, 1fr)
-        [full-end];
+  display: grid;
+  grid-template-rows: 80vh min-content min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start] 5rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
 
-    @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(
-                3,
-                min-content
-            );
-        grid-template-columns:
-            [full-start] minmax(6rem, 1fr)
-            [center-start] repeat(
-                8,
-                [col-start] minmax(min-content, 14rem) [col-end]
-            )
-            [center-end] minmax(6rem, 1fr)
-            [full-end];
-    }
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem 80vh min-content;
-    }
-    @media only screen and (max-width: $bp-850) {
-        grid-template-rows: 6rem calc(100vh - 6rem);
-    }
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(
+        3,
+        min-content
+      );
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr)
+      [full-end];
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 6rem 80vh min-content;
+  }
+  @media only screen and (max-width: $bp-850) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
 }
